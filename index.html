@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Jaideep Sahu — Backend Software Engineer</title>
+  <meta name="description" content="Jaideep Sahu is a backend-focused Software Engineer building fast, reliable real-time systems in Python, FastAPI, Django and PostgreSQL." />
+  <meta name="author" content="Jaideep Sahu" />
+  <meta name="theme-color" content="#FBFBFD" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Jaideep Sahu — Backend Software Engineer" />
+  <meta property="og:description" content="Building fast, reliable real-time backend systems in Python, FastAPI and PostgreSQL." />
+
+  <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Plus+Jakarta+Sans:wght@500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+  <!-- Mark JS as available so motion/hidden states only apply when JS can reveal them -->
+  <script>document.documentElement.classList.add("js");</script>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Scroll progress -->
+  <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+
+  <!-- Skip link -->
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- ===================== NAV ===================== -->
+  <header class="nav" id="nav">
+    <div class="container nav__inner">
+      <a href="#home" class="nav__brand" aria-label="Jaideep Sahu — home">
+        <span class="nav__mark" aria-hidden="true">JD</span>
+        <span class="nav__name">Jaideep Sahu</span>
+      </a>
+
+      <nav class="nav__links" aria-label="Primary">
+        <a href="#about" class="nav__link" data-nav>About</a>
+        <a href="#experience" class="nav__link" data-nav>Experience</a>
+        <a href="#projects" class="nav__link" data-nav>Projects</a>
+        <a href="#skills" class="nav__link" data-nav>Skills</a>
+        <a href="#contact" class="nav__link" data-nav>Contact</a>
+      </nav>
+
+      <div class="nav__actions">
+        <a href="assets/resume.pdf" download="Jaideep_Sahu_Resume.pdf" class="btn btn--sm btn--primary">
+          Resume
+          <svg viewBox="0 0 24 24" class="icon" aria-hidden="true"><path d="M12 3v12m0 0 4-4m-4 4-4-4M5 21h14"/></svg>
+        </a>
+        <button class="nav__toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobileMenu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile menu -->
+    <div class="nav__mobile" id="mobileMenu" hidden>
+      <a href="#about" class="nav__mlink" data-mobile-link>About</a>
+      <a href="#experience" class="nav__mlink" data-mobile-link>Experience</a>
+      <a href="#projects" class="nav__mlink" data-mobile-link>Projects</a>
+      <a href="#skills" class="nav__mlink" data-mobile-link>Skills</a>
+      <a href="#contact" class="nav__mlink" data-mobile-link>Contact</a>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- ===================== HERO ===================== -->
+    <section class="hero" id="home">
+      <div class="hero__bg" aria-hidden="true">
+        <div class="hero__grid"></div>
+        <div class="hero__glow hero__glow--1"></div>
+        <div class="hero__glow hero__glow--2"></div>
+      </div>
+
+      <div class="container hero__inner">
+        <div class="hero__copy">
+          <span class="pill reveal" data-reveal>
+            <span class="pill__dot" aria-hidden="true"></span>
+            Open to backend &amp; platform roles
+          </span>
+
+          <h1 class="hero__title reveal" data-reveal>
+            Backend engineer building<br />
+            <span class="grad">real-time systems</span> that stay fast.
+          </h1>
+
+          <p class="hero__lead reveal" data-reveal>
+            I&rsquo;m <strong>Jaideep Sahu</strong>, a Backend Software Engineer with 2 years of
+            experience building scalable, real-time systems in <span class="kw">Python</span>,
+            <span class="kw">FastAPI</span>, <span class="kw">Django</span> and <span class="kw">PostgreSQL</span>.
+            I focus on thoughtful API design, production debugging and making bottlenecks manageable.
+          </p>
+
+          <div class="hero__cta reveal" data-reveal>
+            <a href="assets/resume.pdf" download="Jaideep_Sahu_Resume.pdf" class="btn btn--primary">
+              Download resume
+              <svg viewBox="0 0 24 24" class="icon" aria-hidden="true"><path d="M12 3v12m0 0 4-4m-4 4-4-4M5 21h14"/></svg>
+            </a>
+            <a href="#contact" class="btn btn--ghost">
+              Get in touch
+              <svg viewBox="0 0 24 24" class="icon" aria-hidden="true"><path d="M5 12h14m0 0-6-6m6 6-6 6"/></svg>
+            </a>
+          </div>
+
+          <div class="hero__social reveal" data-reveal>
+            <a href="https://www.linkedin.com/in/jaideep-sahu-2ab252194" target="_blank" rel="noopener noreferrer" class="social" aria-label="LinkedIn">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9h4v12H3zM10 9h3.8v1.7h.05c.53-1 1.83-2.05 3.76-2.05 4.02 0 4.76 2.65 4.76 6.1V21H22v-5.3c0-1.26-.02-2.9-1.76-2.9-1.77 0-2.04 1.38-2.04 2.8V21H10z"/></svg>
+            </a>
+            <a href="https://github.com/jaideepsahu-237" target="_blank" rel="noopener noreferrer" class="social" aria-label="GitHub">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48l-.01-1.7c-2.78.6-3.37-1.34-3.37-1.34-.45-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.61.07-.61 1 .07 1.53 1.03 1.53 1.03.9 1.53 2.36 1.09 2.94.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.02a9.5 9.5 0 0 1 5 0c1.91-1.29 2.75-1.02 2.75-1.02.55 1.38.2 2.4.1 2.65.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.69-4.57 4.94.36.31.68.92.68 1.85l-.01 2.74c0 .27.18.58.69.48A10 10 0 0 0 12 2z"/></svg>
+            </a>
+            <a href="mailto:jaideepsahu2001@gmail.com" class="social" aria-label="Email">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5h18a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1zm1.5 2L12 12l7.5-5"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Live stream monitor -->
+        <div class="hero__visual reveal" data-reveal>
+          <div class="monitor" aria-label="Illustrative real-time data stream monitor">
+            <div class="monitor__bar">
+              <span class="monitor__dots" aria-hidden="true"><i></i><i></i><i></i></span>
+              <span class="monitor__route">GET&nbsp;/v1/events/stream</span>
+              <span class="monitor__live"><span class="monitor__pulse" aria-hidden="true"></span>live</span>
+            </div>
+
+            <div class="monitor__metrics">
+              <div class="metric">
+                <span class="metric__label">events / s</span>
+                <span class="metric__val" data-count="1284">0</span>
+              </div>
+              <div class="metric">
+                <span class="metric__label">p95 latency</span>
+                <span class="metric__val" data-count="38" data-suffix="ms">0</span>
+              </div>
+              <div class="metric">
+                <span class="metric__label">uptime</span>
+                <span class="metric__val" data-count="99.9" data-decimals="1" data-suffix="%">0</span>
+              </div>
+            </div>
+
+            <canvas class="monitor__chart" id="streamChart" width="520" height="150" role="img" aria-label="Animated stream throughput"></canvas>
+
+            <div class="monitor__log" id="streamLog" aria-hidden="true"></div>
+          </div>
+
+          <div class="hero__chips" aria-hidden="true">
+            <span class="floatchip floatchip--a">SSE</span>
+            <span class="floatchip floatchip--b">PostgreSQL</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== ABOUT ===================== -->
+    <section class="section" id="about">
+      <div class="container">
+        <header class="section__head reveal" data-reveal>
+          <span class="eyebrow">// about</span>
+          <h2 class="section__title">From request to response, built to scale.</h2>
+        </header>
+
+        <div class="about">
+          <div class="about__prose">
+            <p class="reveal" data-reveal>
+              I&rsquo;m a backend-focused Software Engineer based in Pune with two years of experience
+              building scalable, real-time systems in <strong>Python</strong>. I design production
+              services with FastAPI and Django, including Django REST Framework APIs, and design
+              <strong>PostgreSQL</strong> architectures for efficient storage, retrieval and query performance.
+            </p>
+            <p class="reveal" data-reveal>
+              My recent work spans real-time delivery and AI-assisted workflows: migrating live
+              machine-data delivery from WebSockets to <strong>Server-Sent Events</strong>, and building a
+              FastAPI RAG service that uses <strong>Anthropic Claude</strong> over company knowledge and live data.
+              I&rsquo;ve deployed and supported production services on AWS and GCP Cloud Run.
+            </p>
+            <p class="reveal" data-reveal>
+              I enjoy the practical reliability work: diagnosing production pipeline failures,
+              optimizing database and memory-intensive workloads, writing unit tests, and collaborating
+              across teams to leave systems more dependable than I found them.
+            </p>
+          </div>
+
+          <aside class="about__side">
+            <div class="statcard reveal" data-reveal>
+              <span class="statcard__num"><span data-count="2">0</span></span>
+              <span class="statcard__label">Years of experience</span>
+            </div>
+            <div class="statcard reveal" data-reveal>
+              <span class="statcard__num"><span data-count="20" data-suffix="–40%">0</span></span>
+              <span class="statcard__label">Average InfluxDB CPU after caching, down from over 90%</span>
+            </div>
+            <div class="statcard reveal" data-reveal>
+              <span class="statcard__num">~93%</span>
+              <span class="statcard__label">Less peak TIFF-to-PDF memory use; generated PDFs ~90% smaller</span>
+            </div>
+            <ul class="about__facts reveal" data-reveal>
+              <li><span>Based in</span> Pune, India</li>
+              <li><span>Focus</span> Backend &amp; real-time systems</li>
+              <li><span>Degree</span> B.Tech, Computer Science</li>
+            </ul>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== EXPERIENCE ===================== -->
+    <section class="section section--alt" id="experience">
+      <div class="container">
+        <header class="section__head reveal" data-reveal>
+          <span class="eyebrow">// experience</span>
+          <h2 class="section__title">Where I&rsquo;ve been building.</h2>
+        </header>
+
+        <ol class="timeline">
+          <li class="tl reveal" data-reveal>
+            <span class="tl__node" aria-hidden="true"></span>
+            <div class="tl__card">
+              <div class="tl__top">
+                <div>
+                  <h3 class="tl__role">Software Engineer</h3>
+                  <p class="tl__org">Trinesis Technologies Pvt. Ltd.</p>
+                </div>
+                <span class="tl__when">Aug 2024 — Present</span>
+              </div>
+              <ul class="tl__points">
+                <li>Designed and built backend systems powering operational dashboards for live data visualization.</li>
+                <li>Designed the PostgreSQL data architecture for efficient storage, retrieval and optimized query performance.</li>
+                <li>Built Django REST Framework APIs &mdash; routing, views and serializers &mdash; for seamless system integration.</li>
+                <li>Resolved critical performance bottlenecks through connection pooling and query optimization.</li>
+                <li>Practiced unit testing and debugging to support code reliability and requirements.</li>
+                <li>Collaborated with cross-functional teams using Django MVT architecture to design scalable systems.</li>
+              </ul>
+              <div class="taglist">
+                <span class="tag">Python</span>
+                <span class="tag">Django REST Framework</span>
+                <span class="tag">PostgreSQL</span>
+                <span class="tag">Pytest</span>
+              </div>
+            </div>
+          </li>
+
+          <li class="tl reveal" data-reveal>
+            <span class="tl__node" aria-hidden="true"></span>
+            <div class="tl__card">
+              <div class="tl__top">
+                <div>
+                  <h3 class="tl__role">B.Tech, Computer Science Engineering</h3>
+                  <p class="tl__org">Parul Institute of Technology, Parul University &middot; Vadodara</p>
+                </div>
+                <span class="tl__when">2019 — 2023</span>
+              </div>
+              <ul class="tl__points">
+                <li>Bachelor of Technology in Computer Science Engineering.</li>
+              </ul>
+              <div class="taglist">
+                <span class="tag">Computer Science</span>
+                <span class="tag">Computer Science Engineering</span>
+              </div>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ===================== PROJECTS ===================== -->
+    <section class="section" id="projects">
+      <div class="container">
+        <header class="section__head reveal" data-reveal>
+          <span class="eyebrow">// projects</span>
+          <h2 class="section__title">Things I&rsquo;ve shipped &amp; worked on.</h2>
+        </header>
+
+        <div class="projects">
+          <article class="project reveal" data-reveal>
+            <div class="project__head">
+              <h3 class="project__name">FLUXJIVA</h3>
+              <span class="project__kind">Real-time platform &middot; AI</span>
+            </div>
+            <p class="project__desc">
+              An on-machine platform for real-time monitoring of live machine data with an integrated
+              AI assistant. I built its core chat service in <strong>FastAPI</strong>, using <strong>RAG</strong>
+              over company knowledge and live machine data with Anthropic Claude Sonnet, then deployed
+              the service on <strong>GCP Cloud Run</strong>.
+            </p>
+            <ul class="project__list">
+              <li>Migrated from WebSockets to Server-Sent Events, eliminating timeouts under heavy load and streaming live measurements to many concurrent clients with minimal overhead.</li>
+              <li>Added caching for OEE calculations, reducing InfluxDB CPU from over 90% to a 20&ndash;40% average and eliminating request failures under load.</li>
+              <li>Built secure user authentication and token management with Django&rsquo;s auth system.</li>
+            </ul>
+            <div class="taglist">
+              <span class="tag">FastAPI</span>
+              <span class="tag">Django</span>
+              <span class="tag">RAG</span>
+              <span class="tag">Claude</span>
+              <span class="tag">SSE</span>
+              <span class="tag">GCP Cloud Run</span>
+            </div>
+          </article>
+
+          <article class="project reveal" data-reveal>
+            <div class="project__head">
+              <h3 class="project__name">DRIMS</h3>
+              <span class="project__kind">Digital Record Information Management System</span>
+            </div>
+            <p class="project__desc">
+              A Digital Record Information Management System where I developed two new Python backend
+              services and improved existing ones through critical bug fixes, features and performance
+              work. I replaced the default Bottle development server with <strong>Gunicorn</strong> for
+              selected services, enabling concurrent request handling and reducing container downtime.
+            </p>
+            <ul class="project__list">
+              <li>Reduced TIFF-to-PDF peak memory by roughly <strong>93%</strong> (3.8 GB to 250 MB) and generated PDF size by <strong>90%</strong> (76 MB to 8 MB) by replacing Pillow with img2pdf.</li>
+              <li>Diagnosed a memory-exhaustion bug that blocked database-entry creation and caused a batch daemon to repeatedly re-upload files; stopped duplicate AWS Batch jobs and stabilized the pipeline.</li>
+              <li>Deployed, monitored and troubleshot cloud-hosted services on AWS to improve stability and scalability.</li>
+            </ul>
+            <div class="taglist">
+              <span class="tag">Python</span>
+              <span class="tag">Gunicorn</span>
+              <span class="tag">AWS</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== SKILLS ===================== -->
+    <section class="section section--alt" id="skills">
+      <div class="container">
+        <header class="section__head reveal" data-reveal>
+          <span class="eyebrow">// skills</span>
+          <h2 class="section__title">The toolbox.</h2>
+        </header>
+
+        <div class="skills">
+          <div class="skillcard reveal" data-reveal>
+            <h3 class="skillcard__title"><span class="skillcard__idx">01</span> Languages</h3>
+            <div class="taglist">
+              <span class="tag">Python</span>
+              <span class="tag">Java</span>
+            </div>
+          </div>
+
+          <div class="skillcard reveal" data-reveal>
+            <h3 class="skillcard__title"><span class="skillcard__idx">02</span> Backend &amp; APIs</h3>
+            <div class="taglist">
+              <span class="tag">FastAPI</span>
+              <span class="tag">Django</span>
+              <span class="tag">Django REST Framework</span>
+              <span class="tag">Gunicorn</span>
+              <span class="tag">Uvicorn</span>
+              <span class="tag">Bottle</span>
+              <span class="tag">REST APIs</span>
+              <span class="tag">Microservices</span>
+              <span class="tag">SSE</span>
+              <span class="tag">WebSockets</span>
+            </div>
+          </div>
+
+          <div class="skillcard reveal" data-reveal>
+            <h3 class="skillcard__title"><span class="skillcard__idx">03</span> Databases</h3>
+            <div class="taglist">
+              <span class="tag">PostgreSQL</span>
+              <span class="tag">InfluxDB</span>
+            </div>
+          </div>
+
+          <div class="skillcard reveal" data-reveal>
+            <h3 class="skillcard__title"><span class="skillcard__idx">04</span> Cloud &amp; Deployment</h3>
+            <div class="taglist">
+              <span class="tag">AWS</span>
+              <span class="tag">GCP Cloud Run</span>
+              <span class="tag">Docker</span>
+              <span class="tag">Linux</span>
+            </div>
+          </div>
+
+          <div class="skillcard reveal" data-reveal>
+            <h3 class="skillcard__title"><span class="skillcard__idx">05</span> AI &amp; Practices</h3>
+            <div class="taglist">
+              <span class="tag">LLM Integration</span>
+              <span class="tag">RAG</span>
+              <span class="tag">Anthropic Claude</span>
+              <span class="tag">Prompt Engineering</span>
+              <span class="tag">Pytest</span>
+              <span class="tag">Unit Testing</span>
+              <span class="tag">SDLC</span>
+              <span class="tag">STLC</span>
+            </div>
+          </div>
+
+          <div class="skillcard reveal" data-reveal>
+            <h3 class="skillcard__title"><span class="skillcard__idx">06</span> Tools &amp; Collaboration</h3>
+            <div class="taglist">
+              <span class="tag">Postman</span>
+              <span class="tag">VS Code</span>
+              <span class="tag">Git</span>
+              <span class="tag">GitHub</span>
+              <span class="tag">Bitbucket</span>
+              <span class="tag">Jira</span>
+              <span class="tag">OCR</span>
+              <span class="tag">Cross-functional Collaboration</span>
+              <span class="tag">Analytical Problem Solving</span>
+              <span class="tag">Adaptability</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== CONTACT ===================== -->
+    <section class="section" id="contact">
+      <div class="container">
+        <div class="contact reveal" data-reveal>
+          <div class="contact__intro">
+            <span class="eyebrow">// contact</span>
+            <h2 class="section__title">Let&rsquo;s build something reliable.</h2>
+            <p class="contact__lead">
+              I&rsquo;m open to backend and platform engineering roles, and always happy to talk shop.
+              The fastest way to reach me is email &mdash; I usually reply within a day.
+            </p>
+            <a href="mailto:jaideepsahu2001@gmail.com" class="btn btn--primary">
+              Say hello
+              <svg viewBox="0 0 24 24" class="icon" aria-hidden="true"><path d="M5 12h14m0 0-6-6m6 6-6 6"/></svg>
+            </a>
+          </div>
+
+          <div class="contact__grid">
+            <a href="mailto:jaideepsahu2001@gmail.com" class="contactcard">
+              <span class="contactcard__ico" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="M3 5h18a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1zm1.5 2L12 12l7.5-5"/></svg>
+              </span>
+              <span class="contactcard__txt">
+                <span class="contactcard__label">Email</span>
+                <span class="contactcard__val">jaideepsahu2001@gmail.com</span>
+              </span>
+            </a>
+
+            <a href="tel:+917489682231" class="contactcard">
+              <span class="contactcard__ico" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="M6.5 3h3l1.5 5-2 1.5a12 12 0 0 0 5 5l1.5-2 5 1.5v3a2 2 0 0 1-2 2A16 16 0 0 1 4.5 5a2 2 0 0 1 2-2z"/></svg>
+              </span>
+              <span class="contactcard__txt">
+                <span class="contactcard__label">Phone</span>
+                <span class="contactcard__val">+91 74896 82231</span>
+              </span>
+            </a>
+
+            <a href="https://www.linkedin.com/in/jaideep-sahu-2ab252194" target="_blank" rel="noopener noreferrer" class="contactcard">
+              <span class="contactcard__ico" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9h4v12H3zM10 9h3.8v1.7h.05c.53-1 1.83-2.05 3.76-2.05 4.02 0 4.76 2.65 4.76 6.1V21H22v-5.3c0-1.26-.02-2.9-1.76-2.9-1.77 0-2.04 1.38-2.04 2.8V21H10z"/></svg>
+              </span>
+              <span class="contactcard__txt">
+                <span class="contactcard__label">LinkedIn</span>
+                <span class="contactcard__val">in/jaideep-sahu-2ab252194</span>
+              </span>
+            </a>
+
+            <a href="https://github.com/jaideepsahu-237" target="_blank" rel="noopener noreferrer" class="contactcard">
+              <span class="contactcard__ico" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48l-.01-1.7c-2.78.6-3.37-1.34-3.37-1.34-.45-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.61.07-.61 1 .07 1.53 1.03 1.53 1.03.9 1.53 2.36 1.09 2.94.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.02a9.5 9.5 0 0 1 5 0c1.91-1.29 2.75-1.02 2.75-1.02.55 1.38.2 2.4.1 2.65.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.69-4.57 4.94.36.31.68.92.68 1.85l-.01 2.74c0 .27.18.58.69.48A10 10 0 0 0 12 2z"/></svg>
+              </span>
+              <span class="contactcard__txt">
+                <span class="contactcard__label">GitHub</span>
+                <span class="contactcard__val">github.com/jaideepsahu-237</span>
+              </span>
+            </a>
+
+            <div class="contactcard contactcard--static">
+              <span class="contactcard__ico" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="M12 21s-7-5.6-7-11a7 7 0 1 1 14 0c0 5.4-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>
+              </span>
+              <span class="contactcard__txt">
+                <span class="contactcard__label">Location</span>
+                <span class="contactcard__val">Pune, India</span>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <span class="footer__brand"><span class="nav__mark" aria-hidden="true">JD</span> Jaideep Sahu</span>
+      <p class="footer__note">Pune, India</p>
+      <a href="#home" class="footer__top">Back to top
+        <svg viewBox="0 0 24 24" class="icon" aria-hidden="true"><path d="M12 19V5m0 0-6 6m6-6 6 6"/></svg>
+      </a>
+    </div>
+  </footer>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
