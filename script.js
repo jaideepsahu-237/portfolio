@@ -74,7 +74,13 @@
 
   function setActive(id) {
     linkMap.forEach((links, key) => {
-      links.forEach((a) => a.classList.toggle("is-active", key === id));
+      const on = key === id;
+      links.forEach((a) => {
+        a.classList.toggle("is-active", on);
+        // expose the state to assistive tech, not just visually
+        if (on) a.setAttribute("aria-current", "true");
+        else a.removeAttribute("aria-current");
+      });
     });
   }
 
@@ -119,121 +125,5 @@
     counters.forEach((c) => countObs.observe(c));
   } else {
     counters.forEach(animateCount);
-  }
-
-  /* ---------- Hero stream chart (canvas) ---------- */
-  const canvas = $("#streamChart");
-  if (canvas && canvas.getContext) {
-    const ctx = canvas.getContext("2d");
-    let w = 0, h = 0, dpr = Math.min(window.devicePixelRatio || 1, 2);
-
-    // seed data first so resize() can safely redraw
-    const COUNT = 64;
-    const data = [];
-    let seed = 7;
-    const rand = () => { seed = (seed * 9301 + 49297) % 233280; return seed / 233280; };
-    let base = 0.5;
-    for (let i = 0; i < COUNT; i++) {
-      base += (rand() - 0.5) * 0.18;
-      base = Math.max(0.18, Math.min(0.82, base));
-      data.push(base);
-    }
-
-    function resize() {
-      const rect = canvas.getBoundingClientRect();
-      w = rect.width; h = rect.height;
-      canvas.width = Math.round(w * dpr);
-      canvas.height = Math.round(h * dpr);
-      ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
-      draw(); // changing canvas.width clears the bitmap — always repaint
-    }
-
-    function draw() {
-      ctx.clearRect(0, 0, w, h);
-      const pad = 10;
-      const gw = w - pad * 2;
-      const gh = h - pad * 2;
-      const stepX = gw / (data.length - 1);
-      const pts = data.map((v, i) => [pad + i * stepX, pad + (1 - v) * gh]);
-
-      // area fill
-      const grad = ctx.createLinearGradient(0, pad, 0, h);
-      grad.addColorStop(0, "rgba(37,99,235,0.18)");
-      grad.addColorStop(1, "rgba(37,99,235,0)");
-      ctx.beginPath();
-      ctx.moveTo(pts[0][0], h - pad);
-      pts.forEach((p) => ctx.lineTo(p[0], p[1]));
-      ctx.lineTo(pts[pts.length - 1][0], h - pad);
-      ctx.closePath();
-      ctx.fillStyle = grad;
-      ctx.fill();
-
-      // line
-      ctx.beginPath();
-      pts.forEach((p, i) => (i === 0 ? ctx.moveTo(p[0], p[1]) : ctx.lineTo(p[0], p[1])));
-      ctx.strokeStyle = "#2563EB";
-      ctx.lineWidth = 2;
-      ctx.lineJoin = "round";
-      ctx.stroke();
-
-      // leading dot
-      const last = pts[pts.length - 1];
-      ctx.beginPath();
-      ctx.arc(last[0], last[1], 3.5, 0, Math.PI * 2);
-      ctx.fillStyle = "#2563EB";
-      ctx.fill();
-      ctx.beginPath();
-      ctx.arc(last[0], last[1], 6.5, 0, Math.PI * 2);
-      ctx.fillStyle = "rgba(37,99,235,0.18)";
-      ctx.fill();
-    }
-
-    function tick() {
-      base += (rand() - 0.5) * 0.2;
-      base = Math.max(0.18, Math.min(0.82, base));
-      data.push(base);
-      data.shift();
-      draw();
-    }
-
-    resize(); // sizes the canvas and paints the first frame
-    window.addEventListener("resize", resize, { passive: true });
-
-    if (!prefersReduced) {
-      let timer = null;
-      const start = () => { if (!timer) timer = setInterval(tick, 700); };
-      const stop  = () => { clearInterval(timer); timer = null; };
-      // Only animate while in view
-      if ("IntersectionObserver" in window) {
-        const io = new IntersectionObserver((e) => (e[0].isIntersecting ? start() : stop()), { threshold: 0.1 });
-        io.observe(canvas);
-      } else { start(); }
-      document.addEventListener("visibilitychange", () => (document.hidden ? stop() : start()));
-    }
-  }
-
-  /* ---------- Hero stream log (SSE-style events) ---------- */
-  const log = $("#streamLog");
-  if (log && !prefersReduced) {
-    const events = [
-      'event: <b>measurement</b> · part #A-2291 · <span class="ok">ok</span>',
-      'event: <b>stream.open</b> · client 0x4f · <span class="ok">200</span>',
-      'event: <b>measurement</b> · part #B-1043 · <span class="ok">ok</span>',
-      'event: <b>query</b> · pool hit · 6ms',
-      'event: <b>measurement</b> · part #C-7788 · <span class="ok">ok</span>',
-      'event: <b>heartbeat</b> · keep-alive',
-    ];
-    let i = 0;
-    const MAX_LINES = 3;
-    function push() {
-      const p = document.createElement("p");
-      p.innerHTML = events[i % events.length];
-      log.appendChild(p);
-      requestAnimationFrame(() => p.classList.add("show"));
-      while (log.children.length > MAX_LINES) log.removeChild(log.firstChild);
-      i++;
-    }
-    push(); push();
-    setInterval(push, 1800);
   }
 })();

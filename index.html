@@ -5,14 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <title>Jaideep Sahu — Backend Software Engineer</title>
-  <meta name="description" content="Jaideep Sahu is a backend-focused Software Engineer building fast, reliable real-time systems in Python, FastAPI, Django and PostgreSQL." />
+  <meta name="description" content="Jaideep Sahu is a Backend Software Engineer with 2+ years of experience developing and testing Python backend services and REST APIs with FastAPI, Django and PostgreSQL." />
   <meta name="author" content="Jaideep Sahu" />
   <meta name="theme-color" content="#FBFBFD" />
 
   <!-- Open Graph -->
   <meta property="og:type" content="website" />
   <meta property="og:title" content="Jaideep Sahu — Backend Software Engineer" />
-  <meta property="og:description" content="Building fast, reliable real-time backend systems in Python, FastAPI and PostgreSQL." />
+  <meta property="og:description" content="Backend engineer developing and testing Python services and REST APIs — FastAPI, Django, PostgreSQL, AWS and GCP." />
 
   <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg" />
 
@@ -82,7 +82,7 @@
         <div class="hero__copy">
           <span class="pill reveal" data-reveal>
             <span class="pill__dot" aria-hidden="true"></span>
-            Open to backend &amp; platform roles
+            Open to backend engineering roles
           </span>
 
           <h1 class="hero__title reveal" data-reveal>
@@ -91,10 +91,11 @@
           </h1>
 
           <p class="hero__lead reveal" data-reveal>
-            I&rsquo;m <strong>Jaideep Sahu</strong>, a Backend Software Engineer with 2 years of
-            experience building scalable, real-time systems in <span class="kw">Python</span>,
-            <span class="kw">FastAPI</span>, <span class="kw">Django</span> and <span class="kw">PostgreSQL</span>.
-            I focus on thoughtful API design, production debugging and making bottlenecks manageable.
+            I&rsquo;m <strong>Jaideep Sahu</strong>, a Backend Software Engineer with 2+ years of
+            experience developing and testing <span class="kw">Python</span> backend services and
+            REST APIs with <span class="kw">FastAPI</span>, <span class="kw">Django</span> and
+            <span class="kw">PostgreSQL</span>. Much of my work is the unglamorous half: writing tests,
+            debugging production issues and optimizing performance until systems stay reliable under load.
           </p>
 
           <div class="hero__cta reveal" data-reveal>
@@ -121,33 +122,45 @@
           </div>
         </div>
 
-        <!-- Live stream monitor -->
+        <!-- Overview of the three areas Jaideep works in, each with one piece of
+             résumé-backed evidence. Deliberately not a tech-tag list — the Skills
+             section below covers tools; this covers domains and outcomes. -->
         <div class="hero__visual reveal" data-reveal>
-          <div class="monitor" aria-label="Illustrative real-time data stream monitor">
+          <div class="monitor" aria-label="Overview of Jaideep Sahu's main areas of work, with supporting figures">
             <div class="monitor__bar">
               <span class="monitor__dots" aria-hidden="true"><i></i><i></i><i></i></span>
-              <span class="monitor__route">GET&nbsp;/v1/events/stream</span>
-              <span class="monitor__live"><span class="monitor__pulse" aria-hidden="true"></span>live</span>
+              <span class="monitor__route">what I work on</span>
             </div>
 
-            <div class="monitor__metrics">
-              <div class="metric">
-                <span class="metric__label">events / s</span>
-                <span class="metric__val" data-count="1284">0</span>
-              </div>
-              <div class="metric">
-                <span class="metric__label">p95 latency</span>
-                <span class="metric__val" data-count="38" data-suffix="ms">0</span>
-              </div>
-              <div class="metric">
-                <span class="metric__label">uptime</span>
-                <span class="metric__val" data-count="99.9" data-decimals="1" data-suffix="%">0</span>
-              </div>
-            </div>
+            <ul class="pillars">
+              <li class="pillar">
+                <span class="pillar__idx" aria-hidden="true">01</span>
+                <div class="pillar__body">
+                  <span class="pillar__name">Serving &amp; real-time</span>
+                  <span class="pillar__stat">WebSockets &rarr; SSE</span>
+                  <span class="pillar__stat">Bottle &rarr; Gunicorn</span>
+                  <p class="pillar__detail">Live machine data pushed to many clients at once; a dev server replaced with Gunicorn for concurrent requests and less downtime.</p>
+                </div>
+              </li>
 
-            <canvas class="monitor__chart" id="streamChart" width="520" height="150" role="img" aria-label="Animated stream throughput"></canvas>
+              <li class="pillar">
+                <span class="pillar__idx" aria-hidden="true">02</span>
+                <div class="pillar__body">
+                  <span class="pillar__name">Performance &amp; reliability</span>
+                  <span class="pillar__stat">&minus;<span data-count="93" data-suffix="%">0</span> peak memory</span>
+                  <p class="pillar__detail">3.8 GB to 250 MB on TIFF&rarr;PDF conversion; InfluxDB CPU from over 90% to a 20&ndash;40% average.</p>
+                </div>
+              </li>
 
-            <div class="monitor__log" id="streamLog" aria-hidden="true"></div>
+              <li class="pillar">
+                <span class="pillar__idx" aria-hidden="true">03</span>
+                <div class="pillar__body">
+                  <span class="pillar__name">AI integration</span>
+                  <span class="pillar__stat">FastAPI RAG service</span>
+                  <p class="pillar__detail">Retrieval over company knowledge and live machine data, answered by Claude Sonnet on GCP Cloud Run.</p>
+                </div>
+              </li>
+            </ul>
           </div>
 
           <div class="hero__chips" aria-hidden="true">
@@ -169,10 +182,11 @@
         <div class="about">
           <div class="about__prose">
             <p class="reveal" data-reveal>
-              I&rsquo;m a backend-focused Software Engineer based in Pune with two years of experience
-              building scalable, real-time systems in <strong>Python</strong>. I design production
-              services with FastAPI and Django, including Django REST Framework APIs, and design
-              <strong>PostgreSQL</strong> architectures for efficient storage, retrieval and query performance.
+              I&rsquo;m a backend-focused Software Engineer based in Pune with over two years of experience
+              developing and testing <strong>Python</strong> backend services and <strong>REST APIs</strong>.
+              I build production services with FastAPI and Django, including Django REST Framework APIs,
+              and design <strong>PostgreSQL</strong> architectures for efficient storage, retrieval and
+              query performance.
             </p>
             <p class="reveal" data-reveal>
               My recent work spans real-time delivery and AI-assisted workflows: migrating live
@@ -181,15 +195,16 @@
               I&rsquo;ve deployed and supported production services on AWS and GCP Cloud Run.
             </p>
             <p class="reveal" data-reveal>
-              I enjoy the practical reliability work: diagnosing production pipeline failures,
-              optimizing database and memory-intensive workloads, writing unit tests, and collaborating
-              across teams to leave systems more dependable than I found them.
+              The part I enjoy most is the reliability work: writing and maintaining unit tests with
+              <strong>Pytest</strong>, testing APIs, troubleshooting production incidents, and optimizing
+              database and memory-intensive workloads. I like leaving a system measurably more dependable
+              than I found it &mdash; and I&rsquo;d rather find a failure in a test than in a pager alert.
             </p>
           </div>
 
           <aside class="about__side">
             <div class="statcard reveal" data-reveal>
-              <span class="statcard__num"><span data-count="2">0</span></span>
+              <span class="statcard__num"><span data-count="2" data-suffix="+">0</span></span>
               <span class="statcard__label">Years of experience</span>
             </div>
             <div class="statcard reveal" data-reveal>
@@ -230,12 +245,12 @@
                 <span class="tl__when">Aug 2024 — Present</span>
               </div>
               <ul class="tl__points">
-                <li>Designed and built backend systems powering operational dashboards for live data visualization.</li>
-                <li>Designed the PostgreSQL data architecture for efficient storage, retrieval and optimized query performance.</li>
-                <li>Built Django REST Framework APIs &mdash; routing, views and serializers &mdash; for seamless system integration.</li>
-                <li>Resolved critical performance bottlenecks through connection pooling and query optimization.</li>
-                <li>Practiced unit testing and debugging to support code reliability and requirements.</li>
+                <li>Designed and developed backend systems for dashboards supporting operational data visualization.</li>
+                <li>Designed and optimized the PostgreSQL database architecture for efficient data storage and retrieval.</li>
+                <li>Developed Django REST Framework APIs &mdash; routing, views and serializers &mdash; for seamless system integration.</li>
+                <li>Developed and maintained unit tests using <strong>Pytest</strong> and performed debugging to improve backend service reliability.</li>
                 <li>Collaborated with cross-functional teams using Django MVT architecture to design scalable systems.</li>
+                <li>Improved backend performance through connection pooling and SQL query optimization.</li>
               </ul>
               <div class="taglist">
                 <span class="tag">Python</span>
@@ -245,27 +260,18 @@
               </div>
             </div>
           </li>
-
-          <li class="tl reveal" data-reveal>
-            <span class="tl__node" aria-hidden="true"></span>
-            <div class="tl__card">
-              <div class="tl__top">
-                <div>
-                  <h3 class="tl__role">B.Tech, Computer Science Engineering</h3>
-                  <p class="tl__org">Parul Institute of Technology, Parul University &middot; Vadodara</p>
-                </div>
-                <span class="tl__when">2019 — 2023</span>
-              </div>
-              <ul class="tl__points">
-                <li>Bachelor of Technology in Computer Science Engineering.</li>
-              </ul>
-              <div class="taglist">
-                <span class="tag">Computer Science</span>
-                <span class="tag">Computer Science Engineering</span>
-              </div>
-            </div>
-          </li>
         </ol>
+
+        <div class="edu reveal" data-reveal>
+          <span class="eyebrow">// education</span>
+          <div class="edu__card">
+            <div>
+              <h3 class="edu__degree">Bachelor of Technology (B.Tech), Computer Science Engineering</h3>
+              <p class="edu__org">Parul Institute of Technology, Parul University &middot; Vadodara, India</p>
+            </div>
+            <span class="edu__when">2019 — 2023</span>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -291,11 +297,12 @@
             </p>
             <ul class="project__list">
               <li>Migrated from WebSockets to Server-Sent Events, eliminating timeouts under heavy load and streaming live measurements to many concurrent clients with minimal overhead.</li>
-              <li>Added caching for OEE calculations, reducing InfluxDB CPU from over 90% to a 20&ndash;40% average and eliminating request failures under load.</li>
+              <li>Implemented a caching layer for <strong>Overall Equipment Effectiveness (OEE)</strong> calculations, reducing InfluxDB CPU utilization from over 90% to a 20&ndash;40% average and reducing request failures under load.</li>
               <li>Built secure user authentication and token management with Django&rsquo;s auth system.</li>
             </ul>
             <div class="taglist">
               <span class="tag">FastAPI</span>
+              <span class="tag">Uvicorn</span>
               <span class="tag">Django</span>
               <span class="tag">RAG</span>
               <span class="tag">Claude</span>
@@ -307,13 +314,14 @@
           <article class="project reveal" data-reveal>
             <div class="project__head">
               <h3 class="project__name">DRIMS</h3>
-              <span class="project__kind">Digital Record Information Management System</span>
+              <span class="project__kind">Digital Record Information Management System &middot; Client: Brilliant Corporation</span>
             </div>
             <p class="project__desc">
-              A Digital Record Information Management System where I developed two new Python backend
-              services and improved existing ones through critical bug fixes, features and performance
-              work. I replaced the default Bottle development server with <strong>Gunicorn</strong> for
-              selected services, enabling concurrent request handling and reducing container downtime.
+              A Digital Record Information Management System where I developed two Python backend
+              services and enhanced existing ones by resolving critical bugs, adding features and
+              improving overall platform performance. I replaced the default Bottle development server
+              with <strong>Gunicorn</strong> for selected services, enabling concurrent request handling
+              and reducing container downtime.
             </p>
             <ul class="project__list">
               <li>Reduced TIFF-to-PDF peak memory by roughly <strong>93%</strong> (3.8 GB to 250 MB) and generated PDF size by <strong>90%</strong> (76 MB to 8 MB) by replacing Pillow with img2pdf.</li>
@@ -335,36 +343,45 @@
       <div class="container">
         <header class="section__head reveal" data-reveal>
           <span class="eyebrow">// skills</span>
-          <h2 class="section__title">The toolbox.</h2>
+          <h2 class="section__title">What I work with.</h2>
         </header>
 
         <div class="skills">
           <div class="skillcard reveal" data-reveal>
-            <h3 class="skillcard__title"><span class="skillcard__idx">01</span> Languages</h3>
+            <h3 class="skillcard__title"><span class="skillcard__idx">01</span> Languages &amp; Frameworks</h3>
             <div class="taglist">
               <span class="tag">Python</span>
               <span class="tag">Java</span>
+              <span class="tag">FastAPI</span>
+              <span class="tag">Django</span>
+              <span class="tag">Django REST Framework</span>
+              <span class="tag">Bottle</span>
             </div>
           </div>
 
           <div class="skillcard reveal" data-reveal>
-            <h3 class="skillcard__title"><span class="skillcard__idx">02</span> Backend &amp; APIs</h3>
+            <h3 class="skillcard__title"><span class="skillcard__idx">02</span> APIs &amp; Real-time</h3>
             <div class="taglist">
-              <span class="tag">FastAPI</span>
-              <span class="tag">Django</span>
-              <span class="tag">Django REST Framework</span>
-              <span class="tag">Gunicorn</span>
-              <span class="tag">Uvicorn</span>
-              <span class="tag">Bottle</span>
               <span class="tag">REST APIs</span>
               <span class="tag">Microservices</span>
-              <span class="tag">SSE</span>
+              <span class="tag">Server-Sent Events (SSE)</span>
               <span class="tag">WebSockets</span>
             </div>
           </div>
 
           <div class="skillcard reveal" data-reveal>
-            <h3 class="skillcard__title"><span class="skillcard__idx">03</span> Databases</h3>
+            <h3 class="skillcard__title"><span class="skillcard__idx">03</span> Testing &amp; Quality</h3>
+            <div class="taglist">
+              <span class="tag">Pytest</span>
+              <span class="tag">Unit Testing</span>
+              <span class="tag">API Testing</span>
+              <span class="tag">Debugging</span>
+              <span class="tag">Production Troubleshooting</span>
+            </div>
+          </div>
+
+          <div class="skillcard reveal" data-reveal>
+            <h3 class="skillcard__title"><span class="skillcard__idx">04</span> Databases</h3>
             <div class="taglist">
               <span class="tag">PostgreSQL</span>
               <span class="tag">InfluxDB</span>
@@ -372,45 +389,42 @@
           </div>
 
           <div class="skillcard reveal" data-reveal>
-            <h3 class="skillcard__title"><span class="skillcard__idx">04</span> Cloud &amp; Deployment</h3>
+            <h3 class="skillcard__title"><span class="skillcard__idx">05</span> Runtime &amp; Deployment</h3>
             <div class="taglist">
-              <span class="tag">AWS</span>
-              <span class="tag">GCP Cloud Run</span>
+              <span class="tag">Gunicorn</span>
+              <span class="tag">Uvicorn</span>
               <span class="tag">Docker</span>
               <span class="tag">Linux</span>
+              <span class="tag">AWS</span>
+              <span class="tag">GCP Cloud Run</span>
             </div>
           </div>
 
           <div class="skillcard reveal" data-reveal>
-            <h3 class="skillcard__title"><span class="skillcard__idx">05</span> AI &amp; Practices</h3>
+            <h3 class="skillcard__title"><span class="skillcard__idx">06</span> Generative AI</h3>
             <div class="taglist">
               <span class="tag">LLM Integration</span>
               <span class="tag">RAG</span>
               <span class="tag">Anthropic Claude</span>
               <span class="tag">Prompt Engineering</span>
-              <span class="tag">Pytest</span>
-              <span class="tag">Unit Testing</span>
-              <span class="tag">SDLC</span>
-              <span class="tag">STLC</span>
-            </div>
-          </div>
-
-          <div class="skillcard reveal" data-reveal>
-            <h3 class="skillcard__title"><span class="skillcard__idx">06</span> Tools &amp; Collaboration</h3>
-            <div class="taglist">
-              <span class="tag">Postman</span>
-              <span class="tag">VS Code</span>
-              <span class="tag">Git</span>
-              <span class="tag">GitHub</span>
-              <span class="tag">Bitbucket</span>
-              <span class="tag">Jira</span>
-              <span class="tag">OCR</span>
-              <span class="tag">Cross-functional Collaboration</span>
-              <span class="tag">Analytical Problem Solving</span>
-              <span class="tag">Adaptability</span>
             </div>
           </div>
         </div>
+
+        <dl class="skillsmeta reveal" data-reveal>
+          <div class="skillsmeta__row">
+            <dt class="skillsmeta__label">Tooling</dt>
+            <dd class="skillsmeta__val">Git &middot; GitHub &middot; Bitbucket &middot; Jira &middot; Postman &middot; VS Code</dd>
+          </div>
+          <div class="skillsmeta__row">
+            <dt class="skillsmeta__label">Process</dt>
+            <dd class="skillsmeta__val">SDLC &middot; STLC</dd>
+          </div>
+          <div class="skillsmeta__row">
+            <dt class="skillsmeta__label">How I work</dt>
+            <dd class="skillsmeta__val">Cross-functional team collaboration &middot; Analytical problem solving &middot; Adaptability</dd>
+          </div>
+        </dl>
       </div>
     </section>
 
@@ -422,7 +436,7 @@
             <span class="eyebrow">// contact</span>
             <h2 class="section__title">Let&rsquo;s build something reliable.</h2>
             <p class="contact__lead">
-              I&rsquo;m open to backend and platform engineering roles, and always happy to talk shop.
+              I&rsquo;m open to backend engineering roles, and always happy to talk shop.
               The fastest way to reach me is email &mdash; I usually reply within a day.
             </p>
             <a href="mailto:jaideepsahu2001@gmail.com" class="btn btn--primary">
